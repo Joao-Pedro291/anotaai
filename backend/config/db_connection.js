@@ -13,12 +13,5 @@ const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
   port: dbPort,
 });
 
-sequelize
-  .query("SELECT * FROM tb_anotacao")
-  .then(([resultados]) => {
-    console.log(resultados);
-  })
-  .catch((error) => console.log("Erro na consulta" + error));
-
 export { sequelize }; // export nomeado
 //export default sequelize;
